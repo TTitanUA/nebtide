@@ -90,3 +90,9 @@ typings/
 
 # Electron-Forge
 out/
+
+# macOS
+*.pem
+
+# IDE
+/.idea/
