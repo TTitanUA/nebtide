@@ -23,6 +23,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "import/no-unresolved": "warn",
 
     "perfectionist/sort-array-includes": [
       "error",

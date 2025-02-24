@@ -10,7 +10,7 @@ import { FuseV1Options, FuseVersion } from '@electron/fuses';
 const config: ForgeConfig = {
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
   packagerConfig: {
-    asar: true,
+    asar: true
   },
   plugins: [
     new VitePlugin({
@@ -21,20 +21,20 @@ const config: ForgeConfig = {
           // `entry` is just an alias for `build.lib.entry` in the corresponding file of `config`.
           config: 'vite.main.config.ts',
           entry: 'src/main/main.ts',
-          target: 'main',
+          target: 'main'
         },
         {
           config: 'vite.preload.config.ts',
           entry: 'src/preload/preload.ts',
-          target: 'preload',
-        },
+          target: 'preload'
+        }
       ],
       renderer: [
         {
           config: 'vite.renderer.config.ts',
-          name: 'main_window',
-        },
-      ],
+          name: 'main_window'
+        }
+      ]
     }),
     // Fuses are used to enable/disable various Electron functionality
     // at package time, before code signing the application
@@ -45,10 +45,10 @@ const config: ForgeConfig = {
       [FuseV1Options.EnableNodeOptionsEnvironmentVariable]: false,
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
       [FuseV1Options.RunAsNode]: false,
-      version: FuseVersion.V1,
-    }),
+      version: FuseVersion.V1
+    })
   ],
-  rebuildConfig: {},
+  rebuildConfig: {}
 };
 
 export default config;

@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React from 'react';
+import { Route, Routes } from 'react-router';
+
+import { Typography } from '@/components/ui/typography';
+import { AppLayout } from '@/layouts/app-layout';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <input
-        className="toggle theme-controller"
-        type="checkbox"
-        value="synthwave"
-      />
-
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route
+          element={
+            <div>
+              {/*<h1 className='text-primary'>Home</h1>*/}
+              {/*<h1 className='text-neutral-content'>Home</h1>*/}
+              {/*<h1 className='text-primary'>Home</h1>*/}
+              {/*<h1 className='text-primary'>Home</h1>*/}
+              <Typography>Home</Typography>
+            </div>
+          }
+          index
+        />
+      </Route>
+    </Routes>
   );
 }
 
