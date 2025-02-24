@@ -12,5 +12,9 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+
+    "paths": {
+      "@/*": ["./src/renderer/*"]
+    }
   }
 }
