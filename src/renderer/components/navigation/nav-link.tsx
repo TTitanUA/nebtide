@@ -28,8 +28,8 @@ export const NavLink: FC<CustomNavLinkProps> = ({ className, href, label, ...pro
     <Link
       className={({ isActive }) =>
         cn(
-          'flex items-center gap-x-2.5 p-2.5 rounded-lg duration-300 transition-colors hover:bg-slate-100 dark:hover:bg-slate-700',
-          isActive ? 'bg-slate-100 dark:bg-slate-700' : '',
+          'flex items-center gap-x-2.5 p-2.5 rounded-lg duration-300 transition-colors hover:bg-slate-200 dark:hover:bg-slate-700',
+          isActive ? 'bg-slate-200 dark:bg-slate-700' : '',
           className
         )
       }
