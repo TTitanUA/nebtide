@@ -14,22 +14,149 @@
     "plugin:react/recommended",
     "plugin:react/jsx-runtime"
   ],
-  "plugins": [
-    "react",
-    "react-refresh",
-    "react-hooks"
-  ],
+  "plugins": ["react", "react-refresh", "react-hooks", "perfectionist"],
   "parser": "@typescript-eslint/parser",
   "rules": {
     "react-refresh/only-export-components": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+
+    "perfectionist/sort-array-includes": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-classes": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-enums": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-exports": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-imports": [
+      "error",
+      {
+        "customGroups": {
+          "type": {
+            "localTypes": ["@/renderer/types/*"],
+            "react": ["react"],
+            "electron": ["electron", "electron-*", "electron/*"],
+            "react-libraries": ["react-*"]
+          },
+          "value": {
+            "localTypes": ["@/renderer/types/*"],
+            "react": ["react"],
+            "electron": ["electron", "electron-*", "electron/*"],
+            "react-libraries": ["react-*"]
+          }
+        },
+        "groups": [
+          ["react"],
+          ["electron"],
+          ["react-libraries"],
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"],
+          ["parent-type", "sibling-type", "index-type"],
+          "object",
+          "unknown",
+          ["type", "internal-type", "localTypes"]
+        ],
+        "ignoreCase": false,
+        "internalPattern": ["@/*"],
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-interfaces": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-named-exports": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-named-imports": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-object-types": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-switch-case": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-union-types": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ],
+    "perfectionist/sort-variable-declarations": [
+      "error",
+      {
+        "order": "asc",
+        "type": "alphabetical"
+      }
+    ]
   },
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "perfectionist": {
+      "type": "line-length",
+      "partitionByComment": true
     }
   }
 }

@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <input
+        className="toggle theme-controller"
         type="checkbox"
         value="synthwave"
-        className="toggle theme-controller"
       />
 
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
