@@ -1,0 +1,6 @@
+# Ignore artifacts:
+build
+coverage
+.vite
+node_modules
+package-lock.json
