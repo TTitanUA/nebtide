@@ -4,7 +4,7 @@ import { Typography } from '@/components/ui/typography';
 
 export const Settings = () => {
   return (
-    <Typography color='primary' variant='h1'>
+    <Typography className='text-4xl font-bold' color='primary' variant='h1'>
       Settings
     </Typography>
   );
