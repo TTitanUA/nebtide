@@ -9,7 +9,9 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx . --fix"
+    "format": "prettier --write .",
+    "lint": "eslint --ext .ts,.tsx . --fix",
+    "test:full": "npm run lint && npm run format"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.1",
@@ -31,12 +33,14 @@
     "daisyui": "^5.0.0-beta.8",
     "electron": "34.2.0",
     "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-perfectionist": "^4.9.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "postcss": "^8.5.2",
+    "prettier": "3.5.2",
     "tailwindcss": "^4.0.6",
     "ts-node": "^10.9.2",
     "typescript": "~4.5.4",

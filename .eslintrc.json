@@ -12,7 +12,8 @@
     "plugin:import/electron",
     "plugin:import/typescript",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "prettier"
   ],
   "plugins": ["react", "react-refresh", "react-hooks", "perfectionist"],
   "parser": "@typescript-eslint/parser",
